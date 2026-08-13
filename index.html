@@ -57,22 +57,22 @@ body {
     background:
 
         radial-gradient(
-            circle at 75% 30%,
-            rgba(218,170,55,.15),
+            circle at 75% 28%,
+            rgba(124,77,255,.15),
             transparent 32%
         ),
 
         radial-gradient(
             circle at 15% 80%,
-            rgba(218,170,55,.08),
+            rgba(0,191,255,.08),
             transparent 30%
         ),
 
         linear-gradient(
             135deg,
-            #010101,
-            #090704,
-            #020202
+            #050511,
+            #0a0918,
+            #05050f
         );
 }
 
@@ -98,7 +98,7 @@ body {
     height: 500px;
 
     background:
-        rgba(218,170,55,.08);
+        rgba(124,77,255,.10);
 
     top: 10%;
 
@@ -113,7 +113,7 @@ body {
     height: 400px;
 
     background:
-        rgba(218,170,55,.05);
+        rgba(0,191,255,.06);
 
     bottom: 5%;
 
@@ -145,7 +145,7 @@ body {
 
     height: 3px;
 
-    background: #e7bd59;
+    background: #9b7cff;
 
     border-radius: 50%;
 
@@ -572,7 +572,7 @@ h1 {
 
         radial-gradient(
             circle,
-            rgba(218,170,55,.27),
+            rgba(124,77,255,.27),
             transparent 65%
         );
 
@@ -614,7 +614,7 @@ h1 {
 
     border:
         1px solid
-        rgba(218,170,55,.3);
+        rgba(124,77,255,.3);
 
     animation:
         rotate 18s linear infinite;
@@ -651,12 +651,12 @@ h1 {
 
     border:
         1px solid
-        rgba(228,181,64,.45);
+        rgba(124,77,255,.45);
 
     box-shadow:
 
         0 0 70px
-        rgba(218,169,48,.25);
+        rgba(124,77,255,.25);
 }
 
 
@@ -671,7 +671,7 @@ h1 {
 
 
 /* =====================================================
-   FLOATING BUBBLES
+   FLOATING BUBBLES — RIGHT SIDE AROUND LOGO
 ===================================================== */
 
 .feature {
@@ -688,28 +688,23 @@ h1 {
 
     gap: 9px;
 
-    background:
-        rgba(10,9,6,.82);
+    background: rgba(8,7,20,.78);
 
-    border:
-        1px solid
-        rgba(218,170,55,.25);
+    border: 1px solid rgba(124,77,255,.35);
 
-    color: #eee7d7;
+    color: #eeeafa;
 
     font-size: 14px;
 
     font-weight: 700;
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter: blur(15px);
 
-    box-shadow:
-        0 15px 45px
-        rgba(0,0,0,.4);
+    box-shadow: 0 15px 45px rgba(0,0,0,.4);
 
-    animation:
-        float 5s ease-in-out infinite;
+    z-index: 5;
+
+    animation: float 5s ease-in-out infinite;
 }
 
 
@@ -723,10 +718,10 @@ h1 {
 
     border-radius: 50%;
 
-    background: #e2b548;
+    background: #8d62ff;
 
     box-shadow:
-        0 0 12px #e2b548;
+        0 0 12px #8d62ff;
 }
 
 
@@ -734,15 +729,15 @@ h1 {
 
     top: 8%;
 
-    right: 2%;
+    right: -2%;
 }
 
 
 .feature.two {
 
-    top: 25%;
+    top: 28%;
 
-    left: 0;
+    left: 2%;
 
     animation-delay: 1s;
 }
@@ -750,9 +745,9 @@ h1 {
 
 .feature.three {
 
-    bottom: 29%;
+    top: 68%;
 
-    left: 2%;
+    left: 0;
 
     animation-delay: 2s;
 }
@@ -760,9 +755,9 @@ h1 {
 
 .feature.four {
 
-    bottom: 12%;
+    top: 78%;
 
-    right: 2%;
+    right: -1%;
 
     animation-delay: 3s;
 }
@@ -770,7 +765,7 @@ h1 {
 
 .feature.five {
 
-    top: 48%;
+    top: 49%;
 
     right: -5%;
 

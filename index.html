@@ -47,6 +47,11 @@
                 0 0 35px rgba(212, 168, 61, .15);
         }
 
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -113,14 +118,20 @@
 
             background-size: 80px 80px;
 
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent 80%
-            );
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 80%
+                );
 
             z-index: -5;
         }
+
+
+        /* =========================================================
+           MOUSE LIGHT
+        ========================================================= */
 
         #mouseLight {
             position: fixed;
@@ -139,7 +150,8 @@
                     transparent 65%
                 );
 
-            transform: translate(-50%, -50%);
+            transform:
+                translate(-50%, -50%);
 
             z-index: -2;
 
@@ -147,6 +159,11 @@
                 left .15s ease-out,
                 top .15s ease-out;
         }
+
+
+        /* =========================================================
+           GOLD DUST
+        ========================================================= */
 
         #dust {
             position: fixed;
@@ -241,10 +258,13 @@
 
         .nav-logo {
             display: flex;
+
             align-items: center;
+
             gap: 13px;
 
             font-family: "Cinzel", serif;
+
             font-weight: 800;
 
             letter-spacing: 2px;
@@ -264,7 +284,9 @@
 
         .nav-links {
             display: flex;
+
             align-items: center;
+
             gap: 25px;
         }
 
@@ -272,6 +294,7 @@
             color: #a79a7d;
 
             font-size: 11px;
+
             font-weight: 700;
 
             letter-spacing: 1.5px;
@@ -279,7 +302,8 @@
             transition: .25s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--gold-light);
 
             text-shadow:
@@ -290,12 +314,15 @@
         .nav-discord {
             padding: 11px 18px;
 
-            border: 1px solid var(--gold);
+            border:
+                1px solid
+                var(--gold);
 
             background:
                 rgba(212,168,61,.08);
 
-            color: var(--gold-light) !important;
+            color:
+                var(--gold-light) !important;
 
             border-radius: 4px;
 
@@ -304,6 +331,7 @@
 
         .nav-discord:hover {
             background: var(--gold);
+
             color: #080604 !important;
 
             box-shadow:
@@ -325,12 +353,15 @@
 
         .section-label {
             display: inline-flex;
+
             align-items: center;
+
             gap: 10px;
 
             color: var(--gold);
 
             font-size: 11px;
+
             font-weight: 800;
 
             letter-spacing: 4px;
@@ -376,15 +407,57 @@
             color: var(--gold-light);
         }
 
+
+        /* =========================================================
+           ROYAL STAR DIVIDER
+           ----✦-----
+        ========================================================= */
+
         .divider {
             width: 100%;
-            height: 1px;
 
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 18px;
+
+            margin: 5px 0;
+
+            color: var(--gold-light);
+
+            font-size: 20px;
+
+            text-shadow:
+                0 0 12px
+                rgba(212,168,61,.65);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+        }
+
+        .divider::before {
             background:
                 linear-gradient(
                     90deg,
                     transparent,
-                    rgba(212,168,61,.25),
+                    rgba(212,168,61,.75)
+                );
+        }
+
+        .divider::after {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(212,168,61,.75),
                     transparent
                 );
         }
@@ -398,6 +471,7 @@
             min-height: 100vh;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -425,7 +499,8 @@
                     transparent 65%
                 );
 
-            animation: heroGlow 7s ease-in-out infinite;
+            animation:
+                heroGlow 7s ease-in-out infinite;
         }
 
         @keyframes heroGlow {
@@ -448,7 +523,8 @@
             width: min(760px, 90vw);
             height: min(760px, 90vw);
 
-            border: 1px solid
+            border:
+                1px solid
                 rgba(212,168,61,.13);
 
             border-radius: 50%;
@@ -481,6 +557,7 @@
         }
 
         @keyframes spin {
+
             to {
                 transform: rotate(360deg);
             }
@@ -597,21 +674,24 @@
 
             from {
                 opacity: 0;
-                transform: translateY(20px);
+
+                transform:
+                    translateY(20px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
         }
 
         .btn {
-            position: relative;
-
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             min-width: 170px;
@@ -633,7 +713,8 @@
         }
 
         .btn:hover {
-            transform: translateY(-4px);
+            transform:
+                translateY(-4px);
         }
 
         .btn-gold {
@@ -714,18 +795,26 @@
 
             0% {
                 opacity: 0;
-                transform: scaleY(.3);
+
+                transform:
+                    scaleY(.3);
+
                 transform-origin: top;
             }
 
             50% {
                 opacity: 1;
-                transform: scaleY(1);
+
+                transform:
+                    scaleY(1);
             }
 
             100% {
                 opacity: 0;
-                transform: scaleY(.3);
+
+                transform:
+                    scaleY(.3);
+
                 transform-origin: bottom;
             }
         }
@@ -778,9 +867,11 @@
 
             padding: 4px 12px;
 
-            background: var(--black);
+            background:
+                var(--black);
 
-            color: var(--gold);
+            color:
+                var(--gold);
 
             font-size: 20px;
         }
@@ -822,13 +913,11 @@
         }
 
         .stat:hover {
-            transform: translateY(-7px);
+            transform:
+                translateY(-7px);
 
             border-color:
                 rgba(212,168,61,.35);
-
-            background:
-                rgba(212,168,61,.035);
         }
 
         .stat-number {
@@ -895,17 +984,14 @@
 
         .realm-card:hover {
             transform:
-                translateY(-12px)
-                rotateX(2deg);
+                translateY(-12px);
 
             border-color:
                 rgba(212,168,61,.45);
 
             box-shadow:
                 0 30px 70px
-                rgba(0,0,0,.5),
-                0 0 35px
-                rgba(212,168,61,.07);
+                rgba(0,0,0,.5);
         }
 
         .realm-card::after {
@@ -927,24 +1013,12 @@
                     rgba(212,168,61,.12),
                     transparent 70%
                 );
-
-            transition: .5s;
-        }
-
-        .realm-card:hover::after {
-            transform: scale(1.5);
         }
 
         .realm-icon {
             font-size: 34px;
 
             margin-bottom: 30px;
-
-            filter:
-                drop-shadow(
-                    0 0 15px
-                    rgba(212,168,61,.25)
-                );
         }
 
         .realm-card h3 {
@@ -1008,8 +1082,6 @@
         }
 
         .treasury-card {
-            position: relative;
-
             padding: 40px 35px;
 
             border:
@@ -1025,7 +1097,8 @@
         }
 
         .treasury-card:hover {
-            transform: translateY(-8px);
+            transform:
+                translateY(-8px);
 
             border-color:
                 rgba(212,168,61,.35);
@@ -1064,7 +1137,8 @@
             margin-top: 55px;
 
             border-top:
-                1px solid var(--border);
+                1px solid
+                var(--border);
         }
 
         .event {
@@ -1080,7 +1154,8 @@
             padding: 27px 5px;
 
             border-bottom:
-                1px solid var(--border);
+                1px solid
+                var(--border);
 
             transition: .3s;
         }
@@ -1165,6 +1240,7 @@
             content: "";
 
             position: absolute;
+
             inset: 0;
 
             background-image:
@@ -1262,25 +1338,6 @@
             box-shadow:
                 0 0 60px
                 rgba(212,168,61,.15);
-
-            animation:
-                corePulse 3s infinite;
-        }
-
-        @keyframes corePulse {
-
-            0%,
-            100% {
-                box-shadow:
-                    0 0 35px
-                    rgba(212,168,61,.12);
-            }
-
-            50% {
-                box-shadow:
-                    0 0 80px
-                    rgba(212,168,61,.25);
-            }
         }
 
         .map-point {
@@ -1338,15 +1395,17 @@
 
 
         /* =========================================================
-           LEADERSHIP SHARED
+           LEADERSHIP
         ========================================================= */
 
         .leadership-section {
             text-align: center;
         }
 
-        .leadership-section .section-description {
-            margin: auto;
+        .leadership-section
+        .section-description {
+            margin:
+                0 auto;
         }
 
         .leader-grid {
@@ -1354,7 +1413,8 @@
 
             gap: 20px;
 
-            margin: 65px auto 0;
+            margin:
+                65px auto 0;
 
             max-width: 1050px;
         }
@@ -1362,11 +1422,15 @@
         .founders-grid {
             grid-template-columns:
                 repeat(2, 1fr);
+
+            max-width: 800px;
         }
 
         .owners-grid {
             grid-template-columns:
-                repeat(3, 1fr);
+                repeat(2, 1fr);
+
+            max-width: 750px;
         }
 
         .leader-card {
@@ -1394,7 +1458,8 @@
         }
 
         .leader-card:hover {
-            transform: translateY(-10px);
+            transform:
+                translateY(-10px);
 
             border-color:
                 rgba(212,168,61,.4);
@@ -1432,13 +1497,15 @@
             width: 145px;
             height: 145px;
 
-            margin: 0 auto 25px;
+            margin:
+                0 auto 25px;
         }
 
         .leader-pfp::before {
             content: "";
 
             position: absolute;
+
             inset: -8px;
 
             border:
@@ -1455,6 +1522,7 @@
             content: "";
 
             position: absolute;
+
             inset: -14px;
 
             border:
@@ -1465,8 +1533,10 @@
         }
 
         @keyframes pfpSpin {
+
             to {
-                transform: rotate(360deg);
+                transform:
+                    rotate(360deg);
             }
         }
 
@@ -1518,7 +1588,117 @@
 
             max-width: 350px;
 
-            margin: auto;
+            margin:
+                0 auto;
+        }
+
+
+        /* =========================================================
+           SPECTATOR
+        ========================================================= */
+
+        .spectator-section {
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(212,168,61,.035),
+                    transparent 45%
+                );
+        }
+
+        .spectator-section
+        .section-description {
+            margin:
+                0 auto;
+        }
+
+        .spectator-card {
+            position: relative;
+
+            max-width: 450px;
+
+            margin:
+                65px auto 0;
+
+            padding:
+                48px 30px;
+
+            border:
+                1px solid
+                rgba(212,168,61,.30);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(212,168,61,.055),
+                    rgba(255,255,255,.012)
+                );
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.45);
+
+            overflow: hidden;
+
+            transition:
+                transform .4s,
+                border-color .4s,
+                box-shadow .4s;
+        }
+
+        .spectator-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 20%;
+
+            width: 60%;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+        }
+
+        .spectator-card:hover {
+            transform:
+                translateY(-10px);
+
+            border-color:
+                rgba(212,168,61,.55);
+
+            box-shadow:
+                0 35px 90px
+                rgba(0,0,0,.55),
+                0 0 40px
+                rgba(212,168,61,.08);
+        }
+
+        .spectator-card .leader-pfp {
+            width: 165px;
+            height: 165px;
+        }
+
+        .spectator-card h3 {
+            font-size: 34px;
+        }
+
+        .spectator-symbol {
+            color: var(--gold);
+
+            font-size: 20px;
+
+            margin-bottom: 15px;
+
+            letter-spacing: 8px;
         }
 
 
@@ -1545,7 +1725,8 @@
 
             min-height: 430px;
 
-            margin: 65px auto 0;
+            margin:
+                65px auto 0;
 
             border:
                 1px solid
@@ -1599,7 +1780,8 @@
         }
 
         .designer-visual::after {
-            content: "CREATIVE FORGE";
+            content:
+                "CREATIVE FORGE";
 
             position: absolute;
 
@@ -1632,10 +1814,6 @@
                 rgba(212,168,61,.6);
 
             border-radius: 50%;
-
-            box-shadow:
-                0 0 50px
-                rgba(212,168,61,.13);
         }
 
         .designer-pfp img {
@@ -1652,17 +1830,14 @@
         }
 
         .designer-info {
-            padding: 55px 55px;
+            padding:
+                55px;
 
             display: flex;
 
             flex-direction: column;
 
             justify-content: center;
-        }
-
-        .designer-info .leader-role {
-            margin-bottom: 13px;
         }
 
         .designer-info h3 {
@@ -1717,7 +1892,8 @@
 
             gap: 8px;
 
-            padding: 10px 14px;
+            padding:
+                10px 14px;
 
             border:
                 1px solid
@@ -1743,7 +1919,8 @@
             background:
                 rgba(212,168,61,.05);
 
-            transform: translateY(-3px);
+            transform:
+                translateY(-3px);
         }
 
 
@@ -1755,12 +1932,20 @@
             text-align: center;
         }
 
+        .bot-section
+        .section-description {
+            margin:
+                0 auto;
+        }
+
         .bot-card {
             max-width: 800px;
 
-            margin: 60px auto 0;
+            margin:
+                60px auto 0;
 
-            padding: 50px 35px;
+            padding:
+                50px 35px;
 
             border:
                 1px solid
@@ -1778,7 +1963,8 @@
             width: 150px;
             height: 150px;
 
-            margin: 0 auto 30px;
+            margin:
+                0 auto 30px;
 
             border-radius: 50%;
 
@@ -1815,7 +2001,8 @@
         .bot-card p {
             max-width: 600px;
 
-            margin: auto;
+            margin:
+                0 auto;
 
             color: #7c715e;
 
@@ -1935,7 +2122,8 @@
         .final-content p {
             max-width: 600px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
             color: #827762;
 
@@ -1958,7 +2146,8 @@
                 35px 7vw;
 
             border-top:
-                1px solid var(--border);
+                1px solid
+                var(--border);
 
             display: flex;
 
@@ -1984,7 +2173,8 @@
         .reveal {
             opacity: 0;
 
-            transform: translateY(35px);
+            transform:
+                translateY(35px);
 
             transition:
                 opacity .8s ease,
@@ -1994,13 +2184,26 @@
         .reveal.visible {
             opacity: 1;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
         }
 
 
         /* =========================================================
            MOBILE
         ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 9px;
+            }
+
+        }
 
         @media (max-width: 900px) {
 
@@ -2030,20 +2233,19 @@
                 grid-template-columns: 1fr;
             }
 
+            .founders-grid,
+            .owners-grid {
+                grid-template-columns: 1fr;
+
+                max-width: 450px;
+            }
+
             .designer-card {
                 grid-template-columns: 1fr;
             }
 
             .designer-visual {
                 min-height: 390px;
-            }
-
-            .founders-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .owners-grid {
-                grid-template-columns: 1fr;
             }
 
             .map-wrapper {
@@ -2067,8 +2269,14 @@
             }
 
             .designer-info {
-                padding: 40px 28px;
+                padding:
+                    40px 28px;
             }
+
+            .divider {
+                gap: 12px;
+            }
+
         }
 
         @media (max-width: 600px) {
@@ -2096,7 +2304,8 @@
             }
 
             .lore-panel {
-                padding: 30px 25px;
+                padding:
+                    30px 25px;
             }
 
             .designer-visual {
@@ -2142,6 +2351,11 @@
                 right: 8%;
             }
 
+            .spectator-card {
+                padding:
+                    45px 22px;
+            }
+
             footer {
                 flex-direction: column;
 
@@ -2149,16 +2363,14 @@
 
                 text-align: center;
             }
+
         }
 
     </style>
 </head>
 
-<body>
 
-    <!-- =========================================================
-         BACKGROUND EFFECTS
-    ========================================================== -->
+<body>
 
     <div id="dust"></div>
     <div id="mouseLight"></div>
@@ -2166,28 +2378,52 @@
 
     <!-- =========================================================
          NAVIGATION
-    ========================================================== -->
+    ========================================================= -->
 
     <nav>
 
         <a href="#top" class="nav-logo">
-            <span class="nav-crown">♛</span>
-            <span>LUREX KINGDOM</span>
+
+            <span class="nav-crown">
+                ♛
+            </span>
+
+            <span>
+                LUREX KINGDOM
+            </span>
+
         </a>
+
 
         <div class="nav-links">
 
-            <a href="#about">ABOUT</a>
+            <a href="#about">
+                ABOUT
+            </a>
 
-            <a href="#realm">REALM</a>
+            <a href="#realm">
+                REALM
+            </a>
 
-            <a href="#treasury">TREASURY</a>
+            <a href="#treasury">
+                TREASURY
+            </a>
 
-            <a href="#map">MAP</a>
+            <a href="#map">
+                MAP
+            </a>
 
-            <a href="#leadership">LEADERSHIP</a>
+            <a href="#leadership">
+                LEADERSHIP
+            </a>
 
-            <a href="#designer">DESIGNER</a>
+            <a href="#spectator">
+                SPECTATOR
+            </a>
+
+            <a href="#designer">
+                DESIGNER
+            </a>
 
             <a
                 href="https://discord.gg/WWnjfh5tB"
@@ -2203,11 +2439,12 @@
     </nav>
 
 
-    <!-- =========================================================
-         HERO
-    ========================================================== -->
-
     <main id="top">
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
 
         <section class="hero">
 
@@ -2219,16 +2456,33 @@
                     WELCOME TO THE KINGDOM
                 </div>
 
+
+                <!-- ----✦----- -->
+
+                <div class="divider">
+                    <span>✦</span>
+                </div>
+
+
                 <h1>
+
                     LUREX
-                    <span>KINGDOM</span>
+
+                    <span>
+                        KINGDOM
+                    </span>
+
                 </h1>
 
+
                 <p class="hero-subtitle">
+
                     A royal community built around Roblox,
                     events, creativity, rewards and the people
                     who make the kingdom what it is.
+
                 </p>
+
 
                 <div class="hero-actions">
 
@@ -2252,6 +2506,7 @@
 
             </div>
 
+
             <div class="hero-scroll">
                 DESCEND
             </div>
@@ -2274,11 +2529,14 @@
             </h2>
 
             <p class="section-description reveal">
+
                 Lurex Kingdom is a place where community,
                 competition and creativity come together.
                 Every member becomes part of something larger
                 than themselves.
+
             </p>
+
 
             <div class="about-grid">
 
@@ -2304,34 +2562,58 @@
 
                 </div>
 
+
                 <div class="stats reveal">
 
                     <div class="stat">
-                        <div class="stat-number">01</div>
+
+                        <div class="stat-number">
+                            01
+                        </div>
+
                         <div class="stat-label">
                             ONE KINGDOM
                         </div>
+
                     </div>
 
+
                     <div class="stat">
-                        <div class="stat-number">∞</div>
+
+                        <div class="stat-number">
+                            ∞
+                        </div>
+
                         <div class="stat-label">
                             POSSIBILITIES
                         </div>
+
                     </div>
 
+
                     <div class="stat">
-                        <div class="stat-number">24/7</div>
+
+                        <div class="stat-number">
+                            24/7
+                        </div>
+
                         <div class="stat-label">
                             COMMUNITY
                         </div>
+
                     </div>
 
+
                     <div class="stat">
-                        <div class="stat-number">✦</div>
+
+                        <div class="stat-number">
+                            ✦
+                        </div>
+
                         <div class="stat-label">
                             ROYAL ENERGY
                         </div>
+
                     </div>
 
                 </div>
@@ -2341,7 +2623,9 @@
         </section>
 
 
-        <div class="divider"></div>
+        <div class="divider">
+            <span>✦</span>
+        </div>
 
 
         <!-- =====================================================
@@ -2359,16 +2643,21 @@
             </h2>
 
             <p class="section-description reveal">
+
                 There is always something happening behind
                 the gates. Discover the different sides of
                 Lurex Kingdom.
+
             </p>
+
 
             <div class="realm-grid">
 
                 <article class="realm-card reveal">
 
-                    <div class="card-number">01</div>
+                    <div class="card-number">
+                        01
+                    </div>
 
                     <div class="realm-icon">
                         ♜
@@ -2389,7 +2678,9 @@
 
                 <article class="realm-card reveal">
 
-                    <div class="card-number">02</div>
+                    <div class="card-number">
+                        02
+                    </div>
 
                     <div class="realm-icon">
                         ⚔
@@ -2410,7 +2701,9 @@
 
                 <article class="realm-card reveal">
 
-                    <div class="card-number">03</div>
+                    <div class="card-number">
+                        03
+                    </div>
 
                     <div class="realm-icon">
                         ♛
@@ -2437,7 +2730,10 @@
              TREASURY
         ====================================================== -->
 
-        <section id="treasury" class="treasury">
+        <section
+            id="treasury"
+            class="treasury"
+        >
 
             <div class="section-label">
                 THE TREASURY
@@ -2448,11 +2744,14 @@
             </h2>
 
             <p class="section-description reveal">
+
                 The Kingdom isn't only about conversation.
                 There are plenty of ways to get involved,
                 participate and potentially walk away with
                 something valuable.
+
             </p>
+
 
             <div class="treasury-grid">
 
@@ -2532,9 +2831,12 @@
             </h2>
 
             <p class="section-description reveal">
+
                 New activities and community moments can appear
                 throughout the Kingdom. Keep your eyes open.
+
             </p>
+
 
             <div class="events-list">
 
@@ -2635,19 +2937,25 @@
             </h2>
 
             <p class="section-description reveal">
+
                 Every part of the Kingdom has its own purpose.
                 Explore the realm and discover where each path
                 leads.
+
             </p>
+
 
             <div class="map-wrapper reveal">
 
                 <div class="map-ring"></div>
 
                 <div class="map-core">
+
                     LUREX<br>
                     CORE
+
                 </div>
+
 
                 <div class="map-point point-one">
                     COMMUNITY
@@ -2670,7 +2978,9 @@
         </section>
 
 
-        <div class="divider"></div>
+        <div class="divider">
+            <span>✦</span>
+        </div>
 
 
         <!-- =====================================================
@@ -2691,8 +3001,10 @@
             </h2>
 
             <p class="section-description reveal">
+
                 Meet the people behind Lurex Kingdom.
                 Each role has its own place within the realm.
+
             </p>
 
 
@@ -2711,12 +3023,17 @@
 
                 <h2
                     class="section-title reveal"
-                    style="font-size:clamp(30px,4vw,50px);"
+                    style="
+                        font-size:
+                        clamp(30px,4vw,50px);
+                    "
                 >
                     THE ORIGINAL THRONE.
                 </h2>
 
+
                 <div class="leader-grid founders-grid">
+
 
                     <!-- DOMINICK -->
 
@@ -2797,12 +3114,17 @@
 
                 <h2
                     class="section-title reveal"
-                    style="font-size:clamp(30px,4vw,50px);"
+                    style="
+                        font-size:
+                        clamp(30px,4vw,50px);
+                    "
                 >
                     THE ROYAL COUNCIL.
                 </h2>
 
+
                 <div class="leader-grid owners-grid">
+
 
                     <!-- CHEETO -->
 
@@ -2864,40 +3186,78 @@
                     </div>
 
 
-                    <!-- DEATH -->
-
-                    <div class="leader-card reveal">
-
-                        <div class="leader-pfp">
-
-                            <img
-                                src="death.png"
-                                alt="Death"
-                            >
-
-                        </div>
-
-                        <div class="leader-role">
-                            OWNER
-                        </div>
-
-                        <h3>
-                            DEATH
-                        </h3>
-
-                        <p>
-                            Owner of Lurex Kingdom,
-                            helping manage the community
-                            and shape its future.
-                        </p>
-
-                    </div>
-
                 </div>
 
             </div>
 
         </section>
+
+
+        <!-- =====================================================
+             SPECTATOR
+        ====================================================== -->
+
+        <section
+            id="spectator"
+            class="spectator-section"
+        >
+
+            <div class="section-label">
+                SPECIAL ROLE
+            </div>
+
+            <h2 class="section-title reveal">
+                THE SPECTATOR.
+            </h2>
+
+            <p class="section-description reveal">
+
+                A special presence within the Kingdom,
+                watching over the realm from beyond the
+                traditional royal hierarchy.
+
+            </p>
+
+
+            <div class="spectator-card reveal">
+
+                <div class="spectator-symbol">
+                    ✦ ✦ ✦
+                </div>
+
+
+                <div class="leader-pfp">
+
+                    <img
+                        src="death.png"
+                        alt="Death"
+                    >
+
+                </div>
+
+
+                <div class="leader-role">
+                    SPECTATOR
+                </div>
+
+                <h3>
+                    DEATH
+                </h3>
+
+                <p>
+                    A unique presence within Lurex Kingdom,
+                    holding the title of Spectator beyond
+                    the Owner and Founder hierarchy.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <div class="divider">
+            <span>✦</span>
+        </div>
 
 
         <!-- =====================================================
@@ -2918,8 +3278,10 @@
             </h2>
 
             <p class="section-description reveal">
+
                 The visual identity of Lurex Kingdom is shaped
                 by creativity, design and digital art.
+
             </p>
 
 
@@ -2956,11 +3318,13 @@
                     </div>
 
                     <p>
+
                         Appreciate her work for the server,
                         customizing the banner, profile and
                         much more. She's very skilled at what
                         she does. If you need a designer for
                         something, feel free to ask her.
+
                     </p>
 
 
@@ -3024,8 +3388,10 @@
             </h2>
 
             <p class="section-description reveal">
+
                 The Kingdom also has a digital core keeping
                 its systems moving behind the scenes.
+
             </p>
 
 
@@ -3049,9 +3415,11 @@
                 </h3>
 
                 <p>
+
                     Responsible for the Kingdom's bot systems
                     and the digital infrastructure that helps
                     keep the community running.
+
                 </p>
 
             </div>
@@ -3074,8 +3442,10 @@
             </h2>
 
             <p class="section-description reveal">
+
                 A Kingdom survives through the people inside it.
                 These principles represent the spirit of Lurex.
+
             </p>
 
 
@@ -3092,9 +3462,11 @@
                     </h3>
 
                     <p>
+
                         Treat the people around you with
                         respect and help keep the community
                         welcoming.
+
                     </p>
 
                 </div>
@@ -3111,9 +3483,11 @@
                     </h3>
 
                     <p>
+
                         A Kingdom is built by its people.
                         Participate, communicate and make
                         your presence count.
+
                     </p>
 
                 </div>
@@ -3130,9 +3504,11 @@
                     </h3>
 
                     <p>
+
                         Bring ideas, creativity and energy
                         into the realm. The next great idea
                         could come from you.
+
                     </p>
 
                 </div>
@@ -3155,14 +3531,18 @@
                 </div>
 
                 <h2>
+
                     CLAIM<br>
                     YOUR PLACE.
+
                 </h2>
 
                 <p>
+
                     The Kingdom is waiting.
                     Step through the gates and become
                     part of Lurex.
+
                 </p>
 
                 <a
@@ -3183,7 +3563,7 @@
 
     <!-- =========================================================
          FOOTER
-    ========================================================== -->
+    ========================================================= -->
 
     <footer>
 
@@ -3200,9 +3580,10 @@
 
     <!-- =========================================================
          JAVASCRIPT
-    ========================================================== -->
+    ========================================================= -->
 
     <script>
+
 
         /* =====================================================
            GOLD DUST
@@ -3228,7 +3609,7 @@
                 (Math.random() * 12) + "s";
 
             particle.style.opacity =
-                (0.15 + Math.random() * .55);
+                0.15 + Math.random() * .55;
 
             const size =
                 1 + Math.random() * 2.5;
@@ -3239,7 +3620,10 @@
             particle.style.height =
                 size + "px";
 
-            dustContainer.appendChild(particle);
+            dustContainer.appendChild(
+                particle
+            );
+
         }
 
 
@@ -3248,7 +3632,9 @@
         ====================================================== */
 
         const mouseLight =
-            document.getElementById("mouseLight");
+            document.getElementById(
+                "mouseLight"
+            );
 
         document.addEventListener(
             "mousemove",
@@ -3269,7 +3655,9 @@
         ====================================================== */
 
         const revealElements =
-            document.querySelectorAll(".reveal");
+            document.querySelectorAll(
+                ".reveal"
+            );
 
         const observer =
             new IntersectionObserver(
@@ -3304,7 +3692,9 @@
         revealElements.forEach(
             (element) => {
 
-                observer.observe(element);
+                observer.observe(
+                    element
+                );
 
             }
         );
@@ -3396,9 +3786,13 @@
                     () => {
 
                         navLinks.forEach(
-                            (item) =>
-                                item.classList
-                                    .remove("active")
+                            (item) => {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
                         );
 
                         link.classList.add(
@@ -3417,12 +3811,15 @@
         ====================================================== */
 
         const heroTitle =
-            document.querySelector(".hero h1");
+            document.querySelector(
+                ".hero h1"
+            );
 
         setInterval(
             () => {
 
-                if (!heroTitle) return;
+                if (!heroTitle)
+                    return;
 
                 heroTitle.style.textShadow =
                     `

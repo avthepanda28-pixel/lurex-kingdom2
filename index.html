@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lurex Kingdom — Enter the Realm</title>
+    <title>🎃 Lurex Kingdom — Halloween Realm 👻</title>
 
     <meta
         name="description"
-        content="Enter Lurex Kingdom — a royal Roblox community built around events, rewards, creativity and community."
+        content="Enter Lurex Kingdom — a haunted royal Roblox community built around events, rewards, creativity and community. 🎃👻"
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,12 @@
         ========================================================= */
 
         :root {
-            --gold: #d4a83d;
-            --gold-light: #ffe6a0;
-            --gold-bright: #fff3c9;
-            --gold-dark: #765313;
+            --gold: #ff7518;
+            --gold-light: #ffb347;
+            --gold-bright: #fff0d0;
+            --gold-dark: #8f3200;
+            --purple: #8b5cf6;
+            --purple-dark: #2b123f;
 
             --black: #030201;
             --black-2: #080604;
@@ -38,15 +40,78 @@
             --text: #eee3c7;
             --muted: #8d826b;
 
-            --border: rgba(216, 173, 70, .16);
+            --border: rgba(255, 117, 24, .20);
 
             --shadow:
                 0 20px 70px rgba(0, 0, 0, .65);
 
             --glow:
-                0 0 35px rgba(212, 168, 61, .15);
+                0 0 35px rgba(255, 117, 24, .16);
         }
 
+
+
+        /* =========================================================
+           HALLOWEEN ATMOSPHERE 🎃👻🕷️
+        ========================================================= */
+
+        body::after {
+            content: "🎃   🕷️   👻   🦇   🕸️";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding-top: 92px;
+            font-size: 22px;
+            opacity: .18;
+            filter: drop-shadow(0 0 10px rgba(255,117,24,.45));
+            animation: spookyFloat 8s ease-in-out infinite;
+            white-space: pre;
+        }
+
+        @keyframes spookyFloat {
+            0%, 100% { transform: translateY(0) rotate(-1deg); opacity: .14; }
+            50% { transform: translateY(12px) rotate(1deg); opacity: .28; }
+        }
+
+        .halloween-bats {
+            position: fixed;
+            top: 82px;
+            right: 3vw;
+            z-index: 1001;
+            pointer-events: none;
+            font-size: 25px;
+            letter-spacing: 12px;
+            animation: batFlight 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px rgba(139,92,246,.55));
+        }
+
+        @keyframes batFlight {
+            0%,100% { transform: translate(0,0) rotate(0); }
+            50% { transform: translate(-22px,14px) rotate(-3deg); }
+        }
+
+        .halloween-vignette {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -3;
+            box-shadow: inset 0 0 180px rgba(92, 25, 130, .18),
+                        inset 0 0 80px rgba(255, 85, 0, .10);
+        }
+
+        .spooky {
+            text-shadow: 0 0 14px rgba(255,117,24,.45),
+                         0 0 28px rgba(139,92,246,.22);
+        }
+
+        .pumpkin {
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255,117,24,.55));
+        }
 
         /* =========================================================
            RESET
@@ -66,8 +131,13 @@
             background:
                 radial-gradient(
                     circle at 50% -10%,
-                    rgba(212, 168, 61, .10),
+                    rgba(255,117,24, .14),
                     transparent 35%
+                ),
+                radial-gradient(
+                    circle at 15% 45%,
+                    rgba(139,92,246,.08),
+                    transparent 30%
                 ),
                 var(--black);
 
@@ -146,7 +216,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.085),
+                    rgba(255,117,24,.085),
                     transparent 65%
                 );
 
@@ -251,7 +321,7 @@
             backdrop-filter: blur(16px);
 
             border-bottom:
-                1px solid rgba(212,168,61,.10);
+                1px solid rgba(255,117,24,.10);
 
             z-index: 1000;
         }
@@ -278,7 +348,7 @@
             filter:
                 drop-shadow(
                     0 0 10px
-                    rgba(212,168,61,.6)
+                    rgba(255,117,24,.6)
                 );
         }
 
@@ -308,7 +378,7 @@
 
             text-shadow:
                 0 0 12px
-                rgba(212,168,61,.5);
+                rgba(255,117,24,.5);
         }
 
         .nav-discord {
@@ -319,7 +389,7 @@
                 var(--gold);
 
             background:
-                rgba(212,168,61,.08);
+                rgba(255,117,24,.08);
 
             color:
                 var(--gold-light) !important;
@@ -336,7 +406,7 @@
 
             box-shadow:
                 0 0 30px
-                rgba(212,168,61,.25);
+                rgba(255,117,24,.25);
         }
 
 
@@ -432,7 +502,7 @@
 
             text-shadow:
                 0 0 12px
-                rgba(212,168,61,.65);
+                rgba(255,117,24,.65);
         }
 
         .divider::before,
@@ -449,7 +519,7 @@
                 linear-gradient(
                     90deg,
                     transparent,
-                    rgba(212,168,61,.75)
+                    rgba(255,117,24,.75)
                 );
         }
 
@@ -457,7 +527,7 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(212,168,61,.75),
+                    rgba(255,117,24,.75),
                     transparent
                 );
         }
@@ -495,7 +565,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.12),
+                    rgba(255,117,24,.12),
                     transparent 65%
                 );
 
@@ -525,7 +595,7 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.13);
+                rgba(255,117,24,.13);
 
             border-radius: 50%;
 
@@ -545,7 +615,7 @@
 
             border:
                 1px dashed
-                rgba(212,168,61,.11);
+                rgba(255,117,24,.11);
         }
 
         .hero-ring::after {
@@ -599,7 +669,7 @@
             color: var(--gold-bright);
 
             text-shadow:
-                0 0 30px rgba(212,168,61,.12),
+                0 0 30px rgba(255,117,24,.12),
                 0 10px 50px rgba(0,0,0,.9);
 
             animation:
@@ -729,13 +799,13 @@
 
             box-shadow:
                 0 10px 35px
-                rgba(212,168,61,.16);
+                rgba(255,117,24,.16);
         }
 
         .btn-gold:hover {
             box-shadow:
                 0 15px 50px
-                rgba(212,168,61,.30);
+                rgba(255,117,24,.30);
         }
 
         .btn-outline {
@@ -743,15 +813,15 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.45);
+                rgba(255,117,24,.45);
 
             background:
-                rgba(212,168,61,.03);
+                rgba(255,117,24,.03);
         }
 
         .btn-outline:hover {
             background:
-                rgba(212,168,61,.09);
+                rgba(255,117,24,.09);
         }
 
         .hero-scroll {
@@ -845,7 +915,7 @@
             background:
                 linear-gradient(
                     135deg,
-                    rgba(212,168,61,.065),
+                    rgba(255,117,24,.065),
                     rgba(255,255,255,.015)
                 );
 
@@ -917,7 +987,7 @@
                 translateY(-7px);
 
             border-color:
-                rgba(212,168,61,.35);
+                rgba(255,117,24,.35);
         }
 
         .stat-number {
@@ -973,7 +1043,7 @@
                 linear-gradient(
                     145deg,
                     rgba(255,255,255,.035),
-                    rgba(212,168,61,.015)
+                    rgba(255,117,24,.015)
                 );
 
             transition:
@@ -987,7 +1057,7 @@
                 translateY(-12px);
 
             border-color:
-                rgba(212,168,61,.45);
+                rgba(255,117,24,.45);
 
             box-shadow:
                 0 30px 70px
@@ -1010,7 +1080,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.12),
+                    rgba(255,117,24,.12),
                     transparent 70%
                 );
         }
@@ -1046,7 +1116,7 @@
             top: 25px;
 
             color:
-                rgba(212,168,61,.15);
+                rgba(255,117,24,.15);
 
             font-family: "Cinzel", serif;
 
@@ -1065,7 +1135,7 @@
                 linear-gradient(
                     180deg,
                     transparent,
-                    rgba(212,168,61,.025),
+                    rgba(255,117,24,.025),
                     transparent
                 );
         }
@@ -1101,7 +1171,7 @@
                 translateY(-8px);
 
             border-color:
-                rgba(212,168,61,.35);
+                rgba(255,117,24,.35);
         }
 
         .treasury-icon {
@@ -1130,7 +1200,7 @@
 
 
         /* =========================================================
-           EVENTS
+           🎃 EVENTS
         ========================================================= */
 
         .events-list {
@@ -1164,7 +1234,7 @@
             padding-left: 15px;
 
             background:
-                rgba(212,168,61,.025);
+                rgba(255,117,24,.025);
         }
 
         .event-date {
@@ -1196,7 +1266,7 @@
         .event-tag {
             border:
                 1px solid
-                rgba(212,168,61,.2);
+                rgba(255,117,24,.2);
 
             padding: 7px 12px;
 
@@ -1228,7 +1298,7 @@
             background:
                 radial-gradient(
                     circle at center,
-                    rgba(212,168,61,.07),
+                    rgba(255,117,24,.07),
                     transparent 40%
                 ),
                 #050403;
@@ -1245,12 +1315,12 @@
 
             background-image:
                 linear-gradient(
-                    rgba(212,168,61,.06) 1px,
+                    rgba(255,117,24,.06) 1px,
                     transparent 1px
                 ),
                 linear-gradient(
                     90deg,
-                    rgba(212,168,61,.06) 1px,
+                    rgba(255,117,24,.06) 1px,
                     transparent 1px
                 );
 
@@ -1271,7 +1341,7 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.25);
+                rgba(255,117,24,.25);
 
             border-radius: 50%;
         }
@@ -1286,7 +1356,7 @@
 
             border:
                 1px dashed
-                rgba(212,168,61,.15);
+                rgba(255,117,24,.15);
 
             border-radius: 50%;
         }
@@ -1326,18 +1396,18 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.7);
+                rgba(255,117,24,.7);
 
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.18),
+                    rgba(255,117,24,.18),
                     #080604
                 );
 
             box-shadow:
                 0 0 60px
-                rgba(212,168,61,.15);
+                rgba(255,117,24,.15);
         }
 
         .map-point {
@@ -1370,7 +1440,7 @@
 
             box-shadow:
                 0 0 15px
-                rgba(212,168,61,.7);
+                rgba(255,117,24,.7);
         }
 
         .point-one {
@@ -1395,7 +1465,7 @@
 
 
         /* =========================================================
-           LEADERSHIP
+           🧛 LEADERSHIP
         ========================================================= */
 
         .leadership-section {
@@ -1446,7 +1516,7 @@
                 linear-gradient(
                     150deg,
                     rgba(255,255,255,.025),
-                    rgba(212,168,61,.015)
+                    rgba(255,117,24,.015)
                 );
 
             overflow: hidden;
@@ -1462,7 +1532,7 @@
                 translateY(-10px);
 
             border-color:
-                rgba(212,168,61,.4);
+                rgba(255,117,24,.4);
 
             box-shadow:
                 0 30px 60px
@@ -1510,7 +1580,7 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.4);
+                rgba(255,117,24,.4);
 
             border-radius: 50%;
 
@@ -1527,7 +1597,7 @@
 
             border:
                 1px dashed
-                rgba(212,168,61,.12);
+                rgba(255,117,24,.12);
 
             border-radius: 50%;
         }
@@ -1554,7 +1624,7 @@
 
             box-shadow:
                 0 0 30px
-                rgba(212,168,61,.12);
+                rgba(255,117,24,.12);
         }
 
         .leader-role {
@@ -1594,7 +1664,7 @@
 
 
         /* =========================================================
-           SPECTATOR
+           👁️ SPECTATOR
         ========================================================= */
 
         .spectator-section {
@@ -1603,7 +1673,7 @@
             background:
                 radial-gradient(
                     circle at 50% 50%,
-                    rgba(212,168,61,.035),
+                    rgba(255,117,24,.035),
                     transparent 45%
                 );
         }
@@ -1627,12 +1697,12 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.30);
+                rgba(255,117,24,.30);
 
             background:
                 linear-gradient(
                     145deg,
-                    rgba(212,168,61,.055),
+                    rgba(255,117,24,.055),
                     rgba(255,255,255,.012)
                 );
 
@@ -1673,13 +1743,13 @@
                 translateY(-10px);
 
             border-color:
-                rgba(212,168,61,.55);
+                rgba(255,117,24,.55);
 
             box-shadow:
                 0 35px 90px
                 rgba(0,0,0,.55),
                 0 0 40px
-                rgba(212,168,61,.08);
+                rgba(255,117,24,.08);
         }
 
         .spectator-card .leader-pfp {
@@ -1703,14 +1773,14 @@
 
 
         /* =========================================================
-           DESIGNER
+           🧙 DESIGNER
         ========================================================= */
 
         .designer-section {
             background:
                 radial-gradient(
                     circle at 80% 50%,
-                    rgba(212,168,61,.045),
+                    rgba(255,117,24,.045),
                     transparent 35%
                 );
         }
@@ -1736,7 +1806,7 @@
                 linear-gradient(
                     135deg,
                     rgba(255,255,255,.03),
-                    rgba(212,168,61,.018)
+                    rgba(255,117,24,.018)
                 );
 
             overflow: hidden;
@@ -1756,7 +1826,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.12),
+                    rgba(255,117,24,.12),
                     transparent 65%
                 );
         }
@@ -1771,7 +1841,7 @@
 
             border:
                 1px dashed
-                rgba(212,168,61,.25);
+                rgba(255,117,24,.25);
 
             border-radius: 50%;
 
@@ -1792,7 +1862,7 @@
             letter-spacing: 4px;
 
             color:
-                rgba(212,168,61,.4);
+                rgba(255,117,24,.4);
         }
 
         .designer-pfp {
@@ -1811,7 +1881,7 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.6);
+                rgba(255,117,24,.6);
 
             border-radius: 50%;
         }
@@ -1897,7 +1967,7 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.2);
+                rgba(255,117,24,.2);
 
             color: #a99b7b;
 
@@ -1914,10 +1984,10 @@
             color: var(--gold-light);
 
             border-color:
-                rgba(212,168,61,.55);
+                rgba(255,117,24,.55);
 
             background:
-                rgba(212,168,61,.05);
+                rgba(255,117,24,.05);
 
             transform:
                 translateY(-3px);
@@ -1954,7 +2024,7 @@
             background:
                 linear-gradient(
                     145deg,
-                    rgba(212,168,61,.045),
+                    rgba(255,117,24,.045),
                     rgba(255,255,255,.015)
                 );
         }
@@ -1972,11 +2042,11 @@
 
             border:
                 1px solid
-                rgba(212,168,61,.5);
+                rgba(255,117,24,.5);
 
             box-shadow:
                 0 0 50px
-                rgba(212,168,61,.12);
+                rgba(255,117,24,.12);
         }
 
         .bot-pfp img {
@@ -2095,7 +2165,7 @@
             background:
                 radial-gradient(
                     circle,
-                    rgba(212,168,61,.10),
+                    rgba(255,117,24,.10),
                     transparent 65%
                 );
         }
@@ -2372,6 +2442,8 @@
 
 <body>
 
+    <div class="halloween-bats" aria-hidden="true">🦇 🦇 🦇</div>
+    <div class="halloween-vignette" aria-hidden="true"></div>
     <div id="dust"></div>
     <div id="mouseLight"></div>
 
@@ -2384,9 +2456,7 @@
 
         <a href="#top" class="nav-logo">
 
-            <span class="nav-crown">
-                ♛
-            </span>
+            <span class="nav-crown">🎃</span>
 
             <span>
                 LUREX KINGDOM
@@ -2414,15 +2484,15 @@
             </a>
 
             <a href="#leadership">
-                LEADERSHIP
+                🧛 LEADERSHIP
             </a>
 
             <a href="#spectator">
-                SPECTATOR
+                👁️ SPECTATOR
             </a>
 
             <a href="#designer">
-                DESIGNER
+                🧙 DESIGNER
             </a>
 
             <a
@@ -2453,7 +2523,7 @@
             <div class="hero-content">
 
                 <div class="hero-eyebrow">
-                    WELCOME TO THE KINGDOM
+                    🎃 WELCOME TO THE HAUNTED KINGDOM 👻
                 </div>
 
 
@@ -2492,14 +2562,14 @@
                         rel="noopener noreferrer"
                         class="btn btn-gold"
                     >
-                        ENTER THE KINGDOM
+                        ENTER 🎃 THE HAUNTED KINGDOM
                     </a>
 
                     <a
                         href="#about"
                         class="btn btn-outline"
                     >
-                        EXPLORE THE REALM
+                        EXPLORE 👻 THE HAUNTED REALM
                     </a>
 
                 </div>
@@ -2508,7 +2578,7 @@
 
 
             <div class="hero-scroll">
-                DESCEND
+                DESCEND INTO THE DARKNESS 🦇
             </div>
 
         </section>
@@ -2521,7 +2591,7 @@
         <section id="about">
 
             <div class="section-label">
-                THE KINGDOM
+                🎃 THE HAUNTED KINGDOM
             </div>
 
             <h2 class="section-title reveal">
@@ -2572,7 +2642,7 @@
                         </div>
 
                         <div class="stat-label">
-                            ONE KINGDOM
+                            🎃 ONE KINGDOM
                         </div>
 
                     </div>
@@ -2585,7 +2655,7 @@
                         </div>
 
                         <div class="stat-label">
-                            POSSIBILITIES
+                            🪦 POSSIBILITIES
                         </div>
 
                     </div>
@@ -2598,7 +2668,7 @@
                         </div>
 
                         <div class="stat-label">
-                            COMMUNITY
+                            👻 COMMUNITY
                         </div>
 
                     </div>
@@ -2611,7 +2681,7 @@
                         </div>
 
                         <div class="stat-label">
-                            ROYAL ENERGY
+                            🦇 ROYAL ENERGY
                         </div>
 
                     </div>
@@ -2624,7 +2694,7 @@
 
 
         <div class="divider">
-            <span>✦</span>
+            <span>🕸️</span>
         </div>
 
 
@@ -2635,11 +2705,11 @@
         <section id="realm">
 
             <div class="section-label">
-                WHAT AWAITS
+                🕷️ WHAT AWAITS
             </div>
 
             <h2 class="section-title reveal">
-                ENTER THE REALM.
+                ENTER 👻 THE HAUNTED REALM.
             </h2>
 
             <p class="section-description reveal">
@@ -2659,12 +2729,10 @@
                         01
                     </div>
 
-                    <div class="realm-icon">
-                        ♜
-                    </div>
+                    <div class="realm-icon">👻</div>
 
                     <h3>
-                        COMMUNITY
+                        👻 COMMUNITY
                     </h3>
 
                     <p>
@@ -2682,12 +2750,10 @@
                         02
                     </div>
 
-                    <div class="realm-icon">
-                        ⚔
-                    </div>
+                    <div class="realm-icon">🪓</div>
 
                     <h3>
-                        EVENTS
+                        🎃 EVENTS
                     </h3>
 
                     <p>
@@ -2705,12 +2771,10 @@
                         03
                     </div>
 
-                    <div class="realm-icon">
-                        ♛
-                    </div>
+                    <div class="realm-icon">🎃</div>
 
                     <h3>
-                        REWARDS
+                        💀 REWARDS
                     </h3>
 
                     <p>
@@ -2736,11 +2800,11 @@
         >
 
             <div class="section-label">
-                THE TREASURY
+                💀 THE HAUNTED TREASURY
             </div>
 
             <h2 class="section-title reveal">
-                REWARDS AWAIT.
+                💀 REWARDS AWAIT.
             </h2>
 
             <p class="section-description reveal">
@@ -2781,7 +2845,7 @@
                     </div>
 
                     <h3>
-                        SPECIAL REWARDS
+                        SPECIAL 💀 REWARDS
                     </h3>
 
                     <p>
@@ -2800,7 +2864,7 @@
                     </div>
 
                     <h3>
-                        COMMUNITY MOMENTS
+                        👻 COMMUNITY MOMENTS
                     </h3>
 
                     <p>
@@ -2817,7 +2881,7 @@
 
 
         <!-- =====================================================
-             EVENTS
+             🎃 EVENTS
         ====================================================== -->
 
         <section id="events">
@@ -2827,7 +2891,7 @@
             </div>
 
             <h2 class="section-title reveal">
-                THE KINGDOM NEVER SLEEPS.
+                🎃 THE HAUNTED KINGDOM NEVER SLEEPS.
             </h2>
 
             <p class="section-description reveal">
@@ -2860,7 +2924,7 @@
                     </div>
 
                     <div class="event-tag">
-                        COMMUNITY
+                        👻 COMMUNITY
                     </div>
 
                 </div>
@@ -2958,7 +3022,7 @@
 
 
                 <div class="map-point point-one">
-                    COMMUNITY
+                    👻 COMMUNITY
                 </div>
 
                 <div class="map-point point-two">
@@ -2966,7 +3030,7 @@
                 </div>
 
                 <div class="map-point point-three">
-                    EVENTS
+                    🎃 EVENTS
                 </div>
 
                 <div class="map-point point-four">
@@ -2979,12 +3043,12 @@
 
 
         <div class="divider">
-            <span>✦</span>
+            <span>🕸️</span>
         </div>
 
 
         <!-- =====================================================
-             LEADERSHIP
+             🧛 LEADERSHIP
         ====================================================== -->
 
         <section
@@ -3194,7 +3258,7 @@
 
 
         <!-- =====================================================
-             SPECTATOR
+             👁️ SPECTATOR
         ====================================================== -->
 
         <section
@@ -3207,7 +3271,7 @@
             </div>
 
             <h2 class="section-title reveal">
-                THE SPECTATOR.
+                THE 👁️ SPECTATOR.
             </h2>
 
             <p class="section-description reveal">
@@ -3237,7 +3301,7 @@
 
 
                 <div class="leader-role">
-                    SPECTATOR
+                    👁️ SPECTATOR
                 </div>
 
                 <h3>
@@ -3256,12 +3320,12 @@
 
 
         <div class="divider">
-            <span>✦</span>
+            <span>🕸️</span>
         </div>
 
 
         <!-- =====================================================
-             OFFICIAL DESIGNER
+             OFFICIAL 🧙 DESIGNER
         ====================================================== -->
 
         <section
@@ -3274,7 +3338,7 @@
             </div>
 
             <h2 class="section-title reveal">
-                THE ART BEHIND THE KINGDOM.
+                THE ART BEHIND 🎃 THE HAUNTED KINGDOM.
             </h2>
 
             <p class="section-description reveal">
@@ -3306,7 +3370,7 @@
                 <div class="designer-info">
 
                     <div class="leader-role">
-                        OFFICIAL SERVER DESIGNER
+                        OFFICIAL SERVER 🧙 DESIGNER
                     </div>
 
                     <h3>
@@ -3314,7 +3378,7 @@
                     </h3>
 
                     <div class="designer-title">
-                        GRAPHIC DESIGNER & DIGITAL ARTIST
+                        GRAPHIC 🧙 DESIGNER & DIGITAL ARTIST
                     </div>
 
                     <p>
@@ -3434,11 +3498,11 @@
         <section id="codex">
 
             <div class="section-label">
-                THE KINGDOM CODEX
+                🎃 THE HAUNTED KINGDOM CODEX
             </div>
 
             <h2 class="section-title reveal">
-                THE RULES OF THE REALM.
+                THE RULES OF 👻 THE HAUNTED REALM.
             </h2>
 
             <p class="section-description reveal">
@@ -3479,7 +3543,7 @@
                     </div>
 
                     <h3>
-                        COMMUNITY
+                        👻 COMMUNITY
                     </h3>
 
                     <p>
@@ -3566,13 +3630,14 @@
     ========================================================= -->
 
     <footer>
+            <span aria-hidden="true">🎃 👻 🕷️ 🦇</span>
 
         <div>
             © 2026 <strong>LUREX KINGDOM</strong>
         </div>
 
         <div>
-            BUILT FOR THE REALM ✦
+            BUILT FOR 👻 THE HAUNTED REALM ✦
         </div>
 
     </footer>
@@ -3806,6 +3871,41 @@
         );
 
 
+
+        /* =====================================================
+           HALLOWEEN PARTICLES 🎃🕷️
+        ====================================================== */
+
+        const spookySymbols = ["🎃", "👻", "🕷️", "🦇", "🕸️", "💀"];
+        const spookyLayer = document.createElement("div");
+        spookyLayer.id = "spookyParticles";
+        spookyLayer.style.cssText =
+            "position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;";
+        document.body.appendChild(spookyLayer);
+
+        for (let i = 0; i < 22; i++) {
+            const particle = document.createElement("span");
+            particle.textContent =
+                spookySymbols[Math.floor(Math.random() * spookySymbols.length)];
+            particle.style.position = "absolute";
+            particle.style.left = Math.random() * 100 + "vw";
+            particle.style.top = "-40px";
+            particle.style.fontSize = (12 + Math.random() * 14) + "px";
+            particle.style.opacity = (0.08 + Math.random() * 0.20).toFixed(2);
+            particle.style.animation =
+                `halloweenFall ${8 + Math.random() * 12}s linear ${Math.random() * 8}s infinite`;
+            spookyLayer.appendChild(particle);
+        }
+
+        const spookyStyle = document.createElement("style");
+        spookyStyle.textContent = `
+            @keyframes halloweenFall {
+                0% { transform: translateY(-50px) rotate(0deg); }
+                100% { transform: translateY(110vh) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(spookyStyle);
+
         /* =====================================================
            RANDOM GOLD GLITCH
         ====================================================== */
@@ -3824,7 +3924,7 @@
                 heroTitle.style.textShadow =
                     `
                     0 0 ${20 + Math.random() * 20}px
-                    rgba(212,168,61,.15),
+                    rgba(255,117,24,.15),
                     0 10px 50px
                     rgba(0,0,0,.9)
                     `;
